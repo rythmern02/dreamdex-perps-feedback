@@ -1,0 +1,99 @@
+{
+  "runAt": "2026-11-15T10:27:40.665Z",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "node": "v24.15.0",
+  "results": [
+    {
+      "id": "001",
+      "reproduced": true
+    },
+    {
+      "id": "002",
+      "reproduced": true
+    },
+    {
+      "id": "003",
+      "reproduced": true
+    },
+    {
+      "id": "004",
+      "reproduced": true
+    },
+    {
+      "id": "005",
+      "reproduced": true
+    },
+    {
+      "id": "006",
+      "reproduced": true
+    },
+    {
+      "id": "007",
+      "reproduced": true
+    },
+    {
+      "id": "008",
+      "reproduced": true
+    },
+    {
+      "id": "009",
+      "reproduced": true
+    },
+    {
+      "id": "010",
+      "reproduced": true
+    },
+    {
+      "id": "011",
+      "reproduced": true
+    },
+    {
+      "id": "012",
+      "reproduced": true
+    },
+    {
+      "id": "013",
+      "reproduced": true
+    },
+    {
+      "id": "014",
+      "reproduced": true
+    },
+    {
+      "id": "015",
+      "reproduced": true
+    },
+    {
+      "id": "016",
+      "reproduced": true
+    },
+    {
+      "id": "017",
+      "reproduced": true
+    },
+    {
+      "id": "018",
+      "reproduced": true
+    }
+  ],
+  "sourceHashes": {
+    "packages/perp-core/src/config.ts": "c1f387f8d096607da01673dc0fcee167f86845318b72399702f6348278b541a8",
+    "packages/perp-core/src/exchange.ts": "4a2e33463f9d023fa4959aee02bb225fe1987478f4970b8137dfe1084fc33293",
+    "packages/perp-core/src/funding.ts": "c118b8fa828129449ce81e4bef35e6cac5459e370dbfcc32e96925cd9d2bb91f",
+    "packages/perp-core/src/index.ts": "b19b838aea6fea38e62c663a72bb4b4b6dda62b38d75185f401c9daac50e416b",
+    "packages/perp-core/src/margin.ts": "041cfbb5a34bc80c6ddb2d71d81b592c979826a950d617aebdbb2533ea58d23a",
+    "packages/perp-core/src/markets.ts": "95dfbbb84d114927f5a5df87f4a0d96114d3904cb98a8c06c42c3823880a0520",
+    "packages/perp-core/src/operator.ts": "d42869f0125aebf11b8155ce3600975fd8516f9ec5c952e059f4c3286984685c",
+    "packages/perp-core/src/orders.ts": "a9ed57032c74315deafaea99a9ce349875b5bcd4b6eb0d09e2c5065c9402c583",
+    "packages/perp-core/src/stops.ts": "25fad946e4510d135091f8dca24e19e4347814bc8b415b89141dea67be514a25",
+    "@somnia-chain/markets-sdk@0.32.1/dist/unified/exchange.js": "f2fd34c35c40fb251a36bff27fe72e9f2cf6281433bf8534c839d8b8684241c2",
+    "@somnia-chain/markets-sdk@0.32.1/src/unified/exchange.ts": "28dfee523b64eacf37b4bb8618a0820ec6b88001f7b01cd95cc190d89c498050",
+    "@somnia-chain/markets-sdk@0.32.1/dist/perp/margin.js": "fe66170f8f68f4210b4e76fc4ca2209d438349910e104e859a0a405219c7bfbc",
+    "@somnia-chain/markets-sdk@0.32.1/dist/perp/stops.d.ts": "33e151add70b0ecd4a8e47f51ad39dbb1807d5f6324d151d463943a100fe6849",
+    "strategies/perp-starter/src/index.ts": "3e0158ab088489fbd63ff4a0e1a38174d6c5be6a3fee1fd85c4ea19065f731b1",
+    "strategies/perp-maker/src/index.ts": "ed8ccfafe233796f9764ea6f946c8450fd732754f3abcc853f74dd46a9c62e32",
+    "strategies/perp-guard/src/index.ts": "5a7712eb30e5baaa8a4657301d121055ecff804e967c7f189637df309ef5e21a",
+    "strategies/perp-funding/src/index.ts": "0e622d76f877566d2385f30aad43fcf48550b2a9e9a7ee8b9bfd2eb8b3d79423"
+  }
+}

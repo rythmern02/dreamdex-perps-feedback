@@ -1,0 +1,78 @@
+placed order long 0.00297 BTC @ 67302.8 | filled 0 | order 0
+{
+  "reproduced": true,
+  "criteria": {
+    "unpaddedQuoteSufficient": true,
+    "paddedQuoteInsufficient": true,
+    "deployedPoolRejectedBotOrder": true,
+    "rejectionIsCollateralShortfall": true,
+    "rejectionIsNotJavaScriptError": true,
+    "controlNotMarginRejected": true,
+    "localRevertMinedAsReverted": true
+  },
+  "paddedShortfall": "395867354602190125",
+  "localRevertTrace": {
+    "topLevelError": "execution reverted",
+    "collateralPulls": [
+      {
+        "callPath": [
+          "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+          "0x81f9eb88c95a52b4d3ea47a73ac394b8a547d443",
+          "0x478769e1177c0773c43a593dccc4ad15f15f1394",
+          "0x78c989c9c5cd2ed68b4486373c0e4b118c8f1d5c",
+          "0xed7993a74dae1e6656b704a424dcd8711aaf4f72"
+        ],
+        "caller": "0x478769e1177c0773c43a593dccc4ad15f15f1394",
+        "from": "0x0000000000000000000000000000000000000001",
+        "to": "0x478769E1177C0773c43A593DCCc4Ad15F15F1394",
+        "amount": "395867354602190125",
+        "error": "execution reverted",
+        "revertReason": "ERC20: transfer amount exceeds balance"
+      }
+    ]
+  },
+  "poolSimulation": {
+    "label": "bot order: unpadded size at padded price",
+    "accepted": false,
+    "error": {
+      "name": "ContractFunctionExecutionError",
+      "message": "The contract function \"placeOrder\" reverted with the following reason:",
+      "shortMessage": "The contract function \"placeOrder\" reverted with the following reason:\nERC20: transfer amount exceeds balance",
+      "contractRevert": true,
+      "errorName": "Error",
+      "errorArgs": [
+        "ERC20: transfer amount exceeds balance"
+      ],
+      "raw": "0x08c379a00000000000000000000000000000000000000000000000000000000000000020000000000000000000000000000000000000000000000000000000000000002645524332303a207472616e7366657220616d6f756e7420657863656564732062616c616e63650000000000000000000000000000000000000000000000000000",
+      "reason": "ERC20: transfer amount exceeds balance",
+      "causeChain": [
+        {
+          "name": "ContractFunctionExecutionError",
+          "shortMessage": "The contract function \"placeOrder\" reverted with the following reason:\nERC20: transfer amount exceeds balance"
+        },
+        {
+          "name": "ContractFunctionRevertedError",
+          "shortMessage": "The contract function \"placeOrder\" reverted with the following reason:\nERC20: transfer amount exceeds balance"
+        }
+      ]
+    }
+  },
+  "controlSimulation": {
+    "label": "control: size recomputed at padded price",
+    "accepted": true
+  },
+  "localRevertTx": {
+    "hash": "0x9eeefabaf0abd87a9dd4b8e08cec42b9bf191879f6cfceffa4b688fcc51d09b2",
+    "status": "reverted",
+    "block": "49980936",
+    "gasUsed": "328426",
+    "localForkOnly": true
+  },
+  "localControlTx": {
+    "hash": "0x329d4193a801e7f39f02ab5d33626d7fe1df60fb1ae9db525f66f3d278f76afd",
+    "status": "success",
+    "block": "49980937",
+    "gasUsed": "3806425",
+    "localForkOnly": true
+  }
+}

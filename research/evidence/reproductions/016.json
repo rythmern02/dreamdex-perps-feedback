@@ -1,0 +1,33 @@
+{
+  "id": "016",
+  "runAt": "2026-11-15T10:27:40.660Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "config": {
+      "network": "hideki",
+      "chainId": 50312,
+      "rpcUrl": "https://api.hideki2.infra.testnet.somnia.network",
+      "wsRpcUrl": "wss://api.hideki2.infra.testnet.somnia.network/ws",
+      "indexerUrl": "https://hideki-dev.smk.somnia.host/v1/graphql",
+      "operatorRegistry": "0x6B2FbfeD328FF5F20C0BE7D3C3437613aFFE8D3a",
+      "symbol": "",
+      "dryRun": true
+    },
+    "chainId": 50312,
+    "control": {
+      "network": "hideki",
+      "chainId": 50383,
+      "rpcUrl": "https://api.hideki2.infra.testnet.somnia.network",
+      "wsRpcUrl": "wss://api.hideki2.infra.testnet.somnia.network/ws",
+      "indexerUrl": "https://hideki-dev.smk.somnia.host/v1/graphql",
+      "operatorRegistry": "0x6B2FbfeD328FF5F20C0BE7D3C3437613aFFE8D3a",
+      "symbol": "",
+      "dryRun": true
+    },
+    "scope": "Original loadConfig/makeChain; environment controlled; no network or signer."
+  },
+  "reproduced": true
+}

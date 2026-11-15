@@ -1,0 +1,26 @@
+{
+  "id": "014",
+  "runAt": "2026-11-15T10:27:40.656Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "run": {
+      "exit": 1,
+      "logs": [
+        "Error: PERP_SYMBOL=\"BTC-PERP\" does not match a live perp market. Live markets: (none)."
+      ]
+    },
+    "existingPositions": [
+      {
+        "symbol": "BTC/USDso:USDso",
+        "side": "long",
+        "contracts": 1
+      }
+    ],
+    "controlSymbol": "BTC/USDso:USDso",
+    "scope": "Original starter and market resolver; registry response active:false. Does not assert every close-only market maps to inactive."
+  },
+  "reproduced": true
+}

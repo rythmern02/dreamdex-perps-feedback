@@ -1,0 +1,44 @@
+{
+  "id": "008",
+  "runAt": "2026-11-15T10:27:40.649Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "cases": [
+      {
+        "fail": false,
+        "healthReads": 2,
+        "reductionOrders": 2,
+        "shutdowns": 1,
+        "run": {
+          "exit": 0,
+          "logs": [
+            "perp-guard | reduce 25% below 1.5x maintenance, flatten below 1.15x | dry-run false",
+            "BTC-PERP: long 1 (100.00 USDso) | health 1.100x maintenance | status MarginCall",
+            "health 1.100 is below the flatten threshold, closing the position",
+            "ETH-PERP: long 1 (100.00 USDso) | health 1.100x maintenance | status MarginCall",
+            "health 1.100 is below the flatten threshold, closing the position",
+            "guard stopped"
+          ]
+        }
+      },
+      {
+        "fail": true,
+        "healthReads": 1,
+        "reductionOrders": 0,
+        "shutdowns": 0,
+        "run": {
+          "exit": 1,
+          "logs": [
+            "perp-guard | reduce 25% below 1.5x maintenance, flatten below 1.15x | dry-run false",
+            "Error: fixture one-shot health read timeout"
+          ]
+        }
+      }
+    ],
+    "scope": "Original guard main/watchList, marginSnapshot, positionIn, closePosition and placePerp. One transient health-read failure injected before the per-market try/catch."
+  },
+  "reproduced": true
+}

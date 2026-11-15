@@ -1,0 +1,89 @@
+{
+  "id": "006",
+  "runAt": "2026-11-15T10:27:40.644Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "fixtureTransition": "SL #2 becomes terminal TRIGGER_FAILED/NoFill after tick 0; TP #1 stays pending and unlinked; long 1 BTC remains and mark is 98, below the original SL 99.",
+    "originalStopLoss": "99000000000000000000",
+    "terminalRow": {
+      "orderIdRaw": "2",
+      "intent": "reduceOnly",
+      "isBid": false,
+      "triggerOperator": 1,
+      "triggerPrice": "99000000000000000000",
+      "status": "TRIGGER_FAILED",
+      "siblingOrderId": null,
+      "dropReason": "NoFill",
+      "placedOrderId": null
+    },
+    "survivingRow": {
+      "orderIdRaw": "1",
+      "intent": "reduceOnly",
+      "isBid": false,
+      "triggerOperator": 0,
+      "triggerPrice": "102000000000000000000",
+      "status": "PENDING",
+      "siblingOrderId": null,
+      "dropReason": null
+    },
+    "listingCalls": [
+      {
+        "tick": 0,
+        "statuses": [
+          "PENDING"
+        ]
+      },
+      {
+        "tick": 1,
+        "statuses": [
+          "PENDING"
+        ]
+      },
+      {
+        "tick": 2,
+        "statuses": [
+          "PENDING"
+        ]
+      },
+      {
+        "tick": 2,
+        "statuses": [
+          "PENDING"
+        ]
+      }
+    ],
+    "perpCoreClassifiesAsRealFailure": true,
+    "bracketsCreated": 1,
+    "rearmAttempts": 0,
+    "emergencyCloseOrders": 0,
+    "positionStillOpen": [
+      {
+        "symbol": "BTC/USDso:USDso",
+        "side": "long",
+        "contracts": 1
+      }
+    ],
+    "monitorLines": [
+      "long 1 BTC | uPnL ? | 1 stop(s) armed | mark 98.00",
+      "long 1 BTC | uPnL ? | 1 stop(s) armed | mark 98.00"
+    ],
+    "run": {
+      "exit": 0,
+      "logs": [
+        "perp-starter on BTC-PERP (BTC/USDso:USDso) | long 50 USDso at 2x | take-profit 2% stop-loss 1% | dry-run false",
+        "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+        "each pending stop locks 0.15 SOMI, refunded on cancel; a bracket needs two.",
+        "leverage already 2x on BTC-PERP, left alone",
+        "already long 1 BTC, managing it instead of opening another",
+        "long 1 BTC | uPnL ? | 1 stop(s) armed | mark 98.00",
+        "long 1 BTC | uPnL ? | 1 stop(s) armed | mark 98.00",
+        "done"
+      ]
+    },
+    "scope": "Original starter monitoring loop. Terminal stop and no-fill outcome are injected as SDK-documented indexer rows, not observed on chain; this tests recovery once that documented state is returned."
+  },
+  "reproduced": true
+}

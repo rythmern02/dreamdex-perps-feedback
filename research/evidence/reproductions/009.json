@@ -1,0 +1,74 @@
+{
+  "id": "009",
+  "runAt": "2026-11-15T10:27:40.652Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "cases": [
+      {
+        "freshReadFailed": false,
+        "view": {
+          "apr": -0.1095,
+          "perInterval": "-12500000000000",
+          "positive": false,
+          "paidSide": "long",
+          "windowSec": 28800,
+          "intervalSec": 3600,
+          "known": true
+        },
+        "orders": [
+          {
+            "pool": "0x0000000000000000000000000000000000000010",
+            "isBid": true,
+            "price": "100200000000000000000",
+            "quantity": "50000000",
+            "orderType": 2
+          }
+        ],
+        "run": {
+          "exit": 0,
+          "logs": [
+            "perp-funding on BTC-PERP | enter above 10.00% APR, exit below 3.00% | 50 USDso per entry at 2x, cap 200 | dry-run false",
+            "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+            "funding -10.950% APR, paying longs | holding nothing",
+            "stopped. The position is left open deliberately: closing it on exit would realise PnL nobody asked to realise."
+          ]
+        }
+      },
+      {
+        "freshReadFailed": true,
+        "view": {
+          "apr": 0.1095,
+          "perInterval": "12500000000000",
+          "positive": true,
+          "paidSide": "short",
+          "windowSec": 28800,
+          "intervalSec": 3600,
+          "known": true
+        },
+        "orders": [
+          {
+            "pool": "0x0000000000000000000000000000000000000010",
+            "isBid": false,
+            "price": "99800000000000000000",
+            "quantity": "50000000",
+            "orderType": 2
+          }
+        ],
+        "run": {
+          "exit": 0,
+          "logs": [
+            "perp-funding on BTC-PERP | enter above 10.00% APR, exit below 3.00% | 50 USDso per entry at 2x, cap 200 | dry-run false",
+            "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+            "funding 10.950% APR, paying shorts | holding nothing",
+            "stopped. The position is left open deliberately: closing it on exit would realise PnL nobody asked to realise."
+          ]
+        }
+      }
+    ],
+    "scope": "Original liveFunding/fundingApr and complete funding strategy. Indexed positive rate and newer negative rate are controlled fixtures; failure returns old indexed rate with known:true and allows an entry."
+  },
+  "reproduced": true
+}

@@ -1,0 +1,38 @@
+{
+  "id": "017",
+  "runAt": "2026-11-15T10:27:40.661Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "cases": [
+      {
+        "suppliedSide": "short",
+        "run": {
+          "exit": 0,
+          "logs": [
+            "perp-starter on BTC-PERP (BTC/USDso:USDso) | short 50 USDso at 2x | take-profit 2% stop-loss 1% | dry-run true",
+            "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+            "each pending stop locks 0.15 SOMI, refunded on cancel; a bracket needs two.",
+            "leverage already 2x on BTC-PERP, left alone"
+          ]
+        }
+      },
+      {
+        "suppliedSide": "shrt",
+        "run": {
+          "exit": 0,
+          "logs": [
+            "perp-starter on BTC-PERP (BTC/USDso:USDso) | long 50 USDso at 2x | take-profit 2% stop-loss 1% | dry-run true",
+            "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+            "each pending stop locks 0.15 SOMI, refunded on cancel; a bracket needs two.",
+            "leverage already 2x on BTC-PERP, left alone"
+          ]
+        }
+      }
+    ],
+    "scope": "Original complete starter in dry-run with actual side parser; no order sent."
+  },
+  "reproduced": true
+}

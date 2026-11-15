@@ -1,0 +1,23 @@
+{
+  "id": "018",
+  "runAt": "2026-11-15T10:27:40.663Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "inputs": {
+      "PERP_LEVERAGE": "0",
+      "PERP_TAKE_PROFIT_PCT": "-5",
+      "PERP_TICK_MS": "-1"
+    },
+    "accepted": {
+      "PERP_LEVERAGE": 0,
+      "PERP_TAKE_PROFIT_PCT": -5,
+      "PERP_TICK_MS": -1
+    },
+    "yieldedDuringNegativeSleep": false,
+    "scope": "Original envNum and sleep; proves invalid input acceptance and no timer yield for negative sleep. No protocol validation or sustained hot-loop test."
+  },
+  "reproduced": true
+}

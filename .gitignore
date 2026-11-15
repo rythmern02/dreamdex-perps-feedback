@@ -1,0 +1,7 @@
+node_modules/
+tools/node_modules/
+research/upstream/
+.env
+*.log
+review/
+research/evidence/upstream-issues.json

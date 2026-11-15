@@ -1,0 +1,86 @@
+{
+  "id": "015",
+  "runAt": "2026-11-15T10:27:40.657Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "cases": [
+      {
+        "liveReadFailed": false,
+        "rowMark": 100,
+        "knownFixtureFreshMark": 120,
+        "arms": [
+          {
+            "registry": "0x0000000000000000000000000000000000000030",
+            "pool": "0x0000000000000000000000000000000000000010",
+            "operatorRegistry": "0x0000000000000000000000000000000000000030",
+            "isBid": false,
+            "quantity": "0",
+            "triggerPrice": "122400000000000000000",
+            "triggerOperator": 0,
+            "stopOrderType": 1,
+            "intent": "reduceOnly",
+            "pair": {
+              "isBid": false,
+              "quantity": "0",
+              "triggerPrice": "118800000000000000000",
+              "triggerOperator": 1,
+              "stopOrderType": 1
+            }
+          }
+        ],
+        "run": {
+          "exit": 0,
+          "logs": [
+            "perp-starter on BTC-PERP (BTC/USDso:USDso) | long 50 USDso at 2x | take-profit 2% stop-loss 1% | dry-run false",
+            "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+            "each pending stop locks 0.15 SOMI, refunded on cancel; a bracket needs two.",
+            "leverage already 2x on BTC-PERP, left alone",
+            "already long 1 BTC, managing it instead of opening another",
+            "done"
+          ]
+        }
+      },
+      {
+        "liveReadFailed": true,
+        "rowMark": 100,
+        "knownFixtureFreshMark": 120,
+        "arms": [
+          {
+            "registry": "0x0000000000000000000000000000000000000030",
+            "pool": "0x0000000000000000000000000000000000000010",
+            "operatorRegistry": "0x0000000000000000000000000000000000000030",
+            "isBid": false,
+            "quantity": "0",
+            "triggerPrice": "102000000000000000000",
+            "triggerOperator": 0,
+            "stopOrderType": 1,
+            "intent": "reduceOnly",
+            "pair": {
+              "isBid": false,
+              "quantity": "0",
+              "triggerPrice": "99000000000000000000",
+              "triggerOperator": 1,
+              "stopOrderType": 1
+            }
+          }
+        ],
+        "run": {
+          "exit": 0,
+          "logs": [
+            "perp-starter on BTC-PERP (BTC/USDso:USDso) | long 50 USDso at 2x | take-profit 2% stop-loss 1% | dry-run false",
+            "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+            "each pending stop locks 0.15 SOMI, refunded on cancel; a bracket needs two.",
+            "leverage already 2x on BTC-PERP, left alone",
+            "already long 1 BTC, managing it instead of opening another",
+            "done"
+          ]
+        }
+      }
+    ],
+    "scope": "Original starter/liveMark/armBracket; read timeout and stale row controlled. Stop payload construction proven; registry acceptance not tested."
+  },
+  "reproduced": true
+}

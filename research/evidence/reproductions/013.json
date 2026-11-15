@@ -1,0 +1,31 @@
+{
+  "id": "013",
+  "runAt": "2026-11-15T10:27:40.655Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "requests": [
+      {
+        "registry": "0x0000000000000000000000000000000000000030",
+        "orderIds": [
+          "1",
+          "2"
+        ]
+      },
+      {
+        "registry": "0x0000000000000000000000000000000000000030",
+        "orderIds": [
+          "2"
+        ]
+      }
+    ],
+    "afterFailedBatch": [
+      "2"
+    ],
+    "afterLiveOnlyControl": [],
+    "scope": "Original cleanup helper; registry all-or-nothing behavior modeled from SDK source contract. No deployed registry execution."
+  },
+  "reproduced": true
+}

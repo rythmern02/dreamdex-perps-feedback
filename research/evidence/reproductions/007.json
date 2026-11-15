@@ -1,0 +1,53 @@
+{
+  "id": "007",
+  "runAt": "2026-11-15T10:27:40.646Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "cases": [
+      {
+        "fail": false,
+        "ordersPlaced": 2,
+        "cancels": [
+          {
+            "kind": "book",
+            "pool": "0x0000000000000000000000000000000000000010",
+            "orderId": "101"
+          },
+          {
+            "kind": "book",
+            "pool": "0x0000000000000000000000000000000000000010",
+            "orderId": "102"
+          }
+        ],
+        "shutdowns": 1,
+        "run": {
+          "exit": 0,
+          "logs": [
+            "perp-maker on BTC-PERP | 25 USDso per side at 2x | half-spread 15bps skew 10bps | cap 100 USDso | dry-run false",
+            "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+            "quotes pulled, exiting"
+          ]
+        }
+      },
+      {
+        "fail": true,
+        "ordersPlaced": 2,
+        "cancels": [],
+        "shutdowns": 0,
+        "run": {
+          "exit": 1,
+          "logs": [
+            "perp-maker on BTC-PERP | 25 USDso per side at 2x | half-spread 15bps skew 10bps | cap 100 USDso | dry-run false",
+            "MarginBank ready: 1000.00 unlocked, 0.00 locked, equity 1000.00, status Healthy.",
+            "Error: fixture transient market-refresh RPC outage"
+          ]
+        }
+      }
+    ],
+    "scope": "Original maker main, requireMarket, order placement and cancellation helpers; only the third registry read fails. Successful quote receipts are fixture responses, not live resting orders."
+  },
+  "reproduced": true
+}

@@ -1,0 +1,49 @@
+{
+  "id": "002",
+  "runAt": "2026-11-15T10:27:40.588Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "initiatingAccount": "0x0000000000000000000000000000000000000001",
+    "accountAfterSwitch": "0x0000000000000000000000000000000000000002",
+    "sent": [
+      {
+        "actor": "0x0000000000000000000000000000000000000002",
+        "pool": "0x0000000000000000000000000000000000000010",
+        "isBid": true,
+        "price": "100000000000000000000",
+        "quantity": "50000000",
+        "orderType": 2
+      }
+    ],
+    "order": {
+      "id": "42",
+      "symbol": "BTC/USDso:USDso",
+      "chainId": 50383,
+      "type": "market",
+      "side": "buy",
+      "price": 100,
+      "amount": 0.5,
+      "filled": 0.5,
+      "remaining": 0,
+      "status": "closed",
+      "txHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+      "timestamp": 1794738460588,
+      "datetime": "2026-11-15T10:27:40.588Z",
+      "info": {
+        "hash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+        "orderId": "42",
+        "fills": [
+          {
+            "quantityFilled": "50000000"
+          }
+        ]
+      }
+    },
+    "controlActor": "0x0000000000000000000000000000000000000001",
+    "scope": "Original createOrder, setSigner, traderFor and signer config resolution; book wait and trader execution are controlled. Addresses are fixture-only; no key or signature."
+  },
+  "reproduced": true
+}

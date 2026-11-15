@@ -1,0 +1,27 @@
+{
+  "id": "012",
+  "runAt": "2026-11-15T10:27:40.655Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "currentPositionAtWrite": "0",
+    "result": {
+      "sent": true,
+      "orderId": "101",
+      "filled": "100000000"
+    },
+    "orders": [
+      {
+        "pool": "0x0000000000000000000000000000000000000010",
+        "isBid": false,
+        "price": "99800000000000000000",
+        "quantity": "100000000",
+        "orderType": 2
+      }
+    ],
+    "scope": "Original close helper and order construction; controlled external flatten during book read. Proves outgoing ordinary sell; no live reversal or fill is claimed."
+  },
+  "reproduced": true
+}

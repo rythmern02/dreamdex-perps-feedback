@@ -1,0 +1,111 @@
+{
+  "id": "001",
+  "runAt": "2026-11-15T10:27:40.586Z",
+  "node": "v24.15.0",
+  "sourceCommit": "4e75896896e024c03e2033d5920514f249998cd6",
+  "sdkVersion": "0.32.1",
+  "mode": "offline controlled reproduction of original upstream code",
+  "evidence": {
+    "cases": [
+      {
+        "type": "limit",
+        "params": {
+          "timeInForce": "FOK"
+        },
+        "sent": [
+          {
+            "actor": "0x0000000000000000000000000000000000000001",
+            "pool": "0x0000000000000000000000000000000000000010",
+            "isBid": true,
+            "price": "100000000000000000000",
+            "quantity": "100000000",
+            "orderType": 1
+          }
+        ],
+        "error": "Error: FillOrKillNotFilled"
+      },
+      {
+        "type": "market",
+        "params": {
+          "timeInForce": "FOK"
+        },
+        "sent": [
+          {
+            "actor": "0x0000000000000000000000000000000000000001",
+            "pool": "0x0000000000000000000000000000000000000010",
+            "isBid": true,
+            "price": "101000000000000000000",
+            "quantity": "100000000",
+            "orderType": 2
+          }
+        ],
+        "result": {
+          "id": "42",
+          "symbol": "BTC/USDso:USDso",
+          "chainId": 50383,
+          "type": "market",
+          "side": "buy",
+          "price": 101,
+          "amount": 1,
+          "filled": 0.5,
+          "remaining": 0.5,
+          "status": "canceled",
+          "txHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+          "timestamp": 1794738460588,
+          "datetime": "2026-11-15T10:27:40.588Z",
+          "info": {
+            "hash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+            "orderId": "42",
+            "fills": [
+              {
+                "quantityFilled": "50000000"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "type": "market",
+        "params": {
+          "postOnly": true
+        },
+        "sent": [
+          {
+            "actor": "0x0000000000000000000000000000000000000001",
+            "pool": "0x0000000000000000000000000000000000000010",
+            "isBid": true,
+            "price": "101000000000000000000",
+            "quantity": "100000000",
+            "orderType": 2
+          }
+        ],
+        "result": {
+          "id": "42",
+          "symbol": "BTC/USDso:USDso",
+          "chainId": 50383,
+          "type": "market",
+          "side": "buy",
+          "price": 101,
+          "amount": 1,
+          "filled": 0.5,
+          "remaining": 0.5,
+          "status": "canceled",
+          "txHash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+          "timestamp": 1794738460588,
+          "datetime": "2026-11-15T10:27:40.588Z",
+          "info": {
+            "hash": "0x1111111111111111111111111111111111111111111111111111111111111111",
+            "orderId": "42",
+            "fills": [
+              {
+                "quantityFilled": "50000000"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "scope": "Original createOrder/crossingPrice/precision/trader binding; fake book and execution boundary. No live order."
+  },
+  "reproduced": true
+}

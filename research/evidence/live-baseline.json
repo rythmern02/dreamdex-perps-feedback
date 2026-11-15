@@ -1,0 +1,99 @@
+{
+  "capturedAt": "2026-11-14T10:35:02.991Z",
+  "rpc": "https://api.hideki2.infra.testnet.somnia.network",
+  "indexer": "https://hideki-dev.smk.somnia.host/v1/graphql",
+  "readsOnly": true,
+  "chainId": 50383,
+  "block": "49980933",
+  "indexerStatus": 200,
+  "marketsResponse": {
+    "data": {
+      "Market": [
+        {
+          "id": "0xb483ec1fb34996638677c20ab087b16f1896fa53",
+          "poolAddress": "0xb483ec1fb34996638677c20ab087b16f1896fa53",
+          "baseSymbol": "SOL",
+          "quoteSymbol": "USDso",
+          "baseDecimals": 9,
+          "quoteDecimals": 18,
+          "tickSize": "10000000000000000",
+          "lotSize": "10000000",
+          "minQuantity": "100000000",
+          "marginBank": "0x478769e1177c0773c43a593dccc4ad15f15f1394",
+          "stopRegistry": "0x85a0879d19777c343eb317a890d5058ab92b8f5d",
+          "markPrice": "75921896300790500000",
+          "fundingRate": "-345958990745822",
+          "fundingWindowSec": 28800,
+          "fundingIntervalSec": 3600
+        },
+        {
+          "id": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+          "poolAddress": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+          "baseSymbol": "BTC",
+          "quoteSymbol": "USDso",
+          "baseDecimals": 8,
+          "quoteDecimals": 18,
+          "tickSize": "100000000000000000",
+          "lotSize": "1000",
+          "minQuantity": "13000",
+          "marginBank": "0x478769e1177c0773c43a593dccc4ad15f15f1394",
+          "stopRegistry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+          "markPrice": "67196252078174758500000",
+          "fundingRate": "382822858393336",
+          "fundingWindowSec": 28800,
+          "fundingIntervalSec": 3600
+        },
+        {
+          "id": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf",
+          "poolAddress": "0xd6cb1dd58580b84d76068ac21594219ce03aeddf",
+          "baseSymbol": "ETH",
+          "quoteSymbol": "USDso",
+          "baseDecimals": 18,
+          "quoteDecimals": 18,
+          "tickSize": "10000000000000000",
+          "lotSize": "100000000000000",
+          "minQuantity": "4000000000000000",
+          "marginBank": "0x478769e1177c0773c43a593dccc4ad15f15f1394",
+          "stopRegistry": "0x44bfa5b28684e8d2156d15b85902da18f02b3a34",
+          "markPrice": "1908574274694991500000",
+          "fundingRate": "-108750363893363",
+          "fundingWindowSec": 28800,
+          "fundingIntervalSec": 3600
+        }
+      ]
+    }
+  },
+  "btc": {
+    "id": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+    "poolAddress": "0x4181dd08e73bbcdd1ba3e615a18f6abd941b94c0",
+    "baseSymbol": "BTC",
+    "quoteSymbol": "USDso",
+    "baseDecimals": 8,
+    "quoteDecimals": 18,
+    "tickSize": "100000000000000000",
+    "lotSize": "1000",
+    "minQuantity": "13000",
+    "marginBank": "0x478769e1177c0773c43a593dccc4ad15f15f1394",
+    "stopRegistry": "0x52e2ccebaec9332672c247e9a90aa3d61fb615ef",
+    "markPrice": "67196252078174758500000",
+    "fundingRate": "382822858393336",
+    "fundingWindowSec": 28800,
+    "fundingIntervalSec": 3600
+  },
+  "bookParameters": {
+    "tickSize": "100000000000000000",
+    "minQuantity": "13000",
+    "lotSize": "1000"
+  },
+  "health": [
+    true,
+    {
+      "oneBase": "100000000",
+      "markPrice": "67168579644915087500000",
+      "projectedCumulativeFunding": "9083056056747015144366138753743280062500",
+      "effectiveIMFBps": "250",
+      "maintenanceMarginBps": "125",
+      "closeOutMarginBps": "62"
+    }
+  ]
+}
